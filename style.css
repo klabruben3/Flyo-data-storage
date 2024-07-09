@@ -1,0 +1,153 @@
+@font-face {
+    font-family: "Raleway";
+    src: url(./assets/Raleway/static/Raleway-Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-size: 14px;
+    font-family: "Raleway";
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+:root{
+    /* Natural */
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+
+    /* grandient */
+    --light-peach: hsl(6, 100%, 80%);
+    --light-magenta: hsl(335, 100%, 65%);
+}
+main{
+    background-color: var(--very-dark-blue);
+    background-image: url(./public/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-size: 100%;
+    height: 100vh;
+    width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    align-items: end;
+    gap: 30px;
+}
+.flyo{
+    background-color: var(--dark-blue);
+    height: 201px;
+    width: 350px;
+    border-radius: 7px 90px 7px 7px;
+    background-image: url(./assets/logo.svg);
+    background-repeat: no-repeat;
+    background-position-x: 41px;
+    background-position-y: 40px;
+    position: relative;
+}
+.files{
+    position: absolute;
+    top: 113px;
+    left: 41px;
+    width: fit-content;
+    display: flex;
+    gap: 16px;
+}
+.files button{
+    border: none;
+    background-color: var(--very-dark-blue);
+    height: 48px;
+    width: 48px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.storage{
+    height: 154px;
+    width: 540px;
+    background-color: var(--dark-blue);
+    border-radius: 8px;
+    padding: 43px 0 0 40px;
+    position: relative;
+}
+.storage-info{
+    color: white;
+}
+.storage-info span{
+    font-weight: 700;
+}
+.progress-container{
+    display: flex;
+    align-items: center;
+    padding-left: 3px;
+    margin: 16px 0 10px 0;
+
+    width: 459px;
+    height: 20px;
+    background-color: var(--very-dark-blue);border-radius: 10px;
+}
+.remaining{
+    height: 72px;
+    width: 179px;
+    background-color: white;
+    border-radius: 10px 10px 0 10px;
+    position: absolute;
+    bottom: 129px;
+    right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+}
+.remaining span:nth-child(1){
+    color: var(--very-dark-blue);
+    font-size: 42px;
+    font-weight: 700;
+}
+.remaining span:nth-child(2){
+    color: var(--grayish-blue);
+    font-weight: 700;
+}
+.remaining::after{
+    content: "";
+    height: 22px;
+    width: 22px;
+    box-sizing: border-box;
+    border-top: 22px solid white;
+    border-left: 22px solid transparent;
+    position: absolute;
+    top: 100%;
+    right: 0;
+}
+.progress{
+    width: 339px;
+    height: 14px;
+    border-radius: 7px;
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.circle{
+    background-color: white;
+    margin-right: 2px;
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+}
+.limit{
+    width: 459px;
+    color: white;
+    font-weight: 700;
+    display: flex;
+}
+.limit span:nth-child(1){
+    margin-right: auto;
+}
